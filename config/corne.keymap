@@ -61,12 +61,12 @@
 
                 navigation_layer {
 // -----------------------------------------------------------------------------------------
-// |    |      |  UP  |      |     |     |   |      |      |     |      |      |RESET|
+// |    |      |  UP  |      |     |     |   |      |      |     |      |      |BOOTL|
 // |    | LEFT | DOWN |RIGHT |     |     |   | LEFT | DOWN | UP  | RIGHT|  UP  |     |
 // |    |      |      |      |     |     |   |      |      |     | LEFT | DOWN |RIGHT|
 //                    |      |     |     |   |      |      |     |
                         bindings = <
-   &none    &none     &kp UP    &none     &none     &none       &none     &none     &none   &none    &none    &reset
+   &none    &none     &kp UP    &none     &none     &none       &none     &none     &none   &none    &none    &bootloader
    &none    &kp LEFT  &kp DOWN  &kp RIGHT &none     &none       &kp LEFT  &kp DOWN  &kp UP  &kp DOWN &kp UP   &none
    &none    &none     &none     &none     &none     &none       &none     &none     &none   &kp LEFT &kp DOWN &kp RIGHT
                                 &none     &none     &none       &none     &none     &none
@@ -75,14 +75,14 @@
 
                 configuration_layer {
 // -----------------------------------------------------------------------------------------
-// | RESET|     |     |     |     |     |   |      |      |     |      |      |     |
+// | BOOTL|     |     |     |     |     |   |      |      |     |      |      |     |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |      |      |     |      |      |     |
 // |      |     |     |     |     |     |   |      |      |     |      |      |     |
 //                    |     |     |     |   |      |      |     |
                         bindings = <
-   &reset     &none        &none        &none        &none        &none           &none     &none     &none   &none    &none    &none
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none     &none     &none   &none    &none    &none
-   &none      &none        &none        &none        &none        &none           &none     &none     &none   &none    &none    &none
+   &bootloader &none        &none        &none        &none        &none           &none     &none     &none   &none    &none    &none
+   &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none     &none     &none   &none    &none    &none
+   &none       &none        &none        &none        &none        &none           &none     &none     &none   &none    &none    &none
                                 &none     &none     &none       &none     &none     &none
                         >;
                 };
